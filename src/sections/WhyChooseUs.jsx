@@ -1,66 +1,94 @@
 import React from "react";
-// import { CheckCircle } from "lucide-react"; // clean icons
+import {
+  Clock,
+  ShieldCheck,
+  Wrench,
+  BadgeCheck,
+  DollarSign,
+  Truck,
+} from "lucide-react";
+
+// Features data (clean + business aligned)
 const features = [
   {
-    title: "Proven Results",
+    icon: Clock,
+    title: "Same-Day Repairs",
     description:
-      "We’ve proudly maintained a 100% pass rate for the past 3 years, helping students achieve academic success with confidence.",
+      "We offer fast and reliable same-day repair services to get your appliances working again quickly.",
   },
   {
-    title: "Inclusive Learning Environment",
+    icon: Wrench,
+    title: "Certified Technicians",
     description:
-      "We support every learner, ensuring lessons are clear, engaging, and suited to different learning styles.",
+      "Our skilled technicians are trained to repair all major appliance brands with precision.",
   },
   {
-    title: "Experienced & Qualified Tutor",
+    icon: ShieldCheck,
+    title: "6-Month Guarantee",
     description:
-      "Our tutor is highly trained with extensive experience, focused on delivering results and simplifying complex topics.",
+      "We stand by our work with a service guarantee to give you peace of mind.",
   },
   {
-    title: "Exam-Focused Preparation",
+    icon: DollarSign,
+    title: "No Hidden Costs",
     description:
-      "We prepare students specifically for exams using proven strategies, past papers, and targeted revision techniques.",
+      "Transparent pricing with no surprises — what we quote is what you pay.",
   },
   {
-    title: "CAPS & ATP Aligned Content",
+    icon: Truck,
+    title: "We Come To You",
     description:
-      "All lessons follow the official CAPS and Annual Teaching Plan (ATP), ensuring students stay aligned with school curriculum.",
+      "Our team comes directly to your home for convenient and hassle-free service.",
   },
   {
-    title: "Dedicated Time & Attention",
+    icon: BadgeCheck,
+    title: "Trusted Service",
     description:
-      "We allocate enough time per lesson to ensure full understanding — no rushing no confusion.",
+      "We are trusted by many customers for delivering consistent and high-quality repairs.",
   },
-
 ];
+
 export default function WhyChooseUs() {
   return (
-    <section className="bg-background-2 text-white py-12 px-6">
+    <section className="bg-slate-900 text-white py-16 px-6">
+      
+      {/* Header */}
       <div className="max-w-6xl mx-auto text-center mb-12">
-        {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Us</h2>
-        {/* Subheading */}
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-400">
+          Why Choose Us
+        </h2>
         <p className="text-gray-300 max-w-2xl mx-auto">
-          Helping students succeed with structured, high-quality tutoring that
-          delivers real results.
+          Reliable, fast, and professional appliance repair services you can trust.
         </p>
       </div>
+
       {/* Grid */}
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto ">
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            className="bg-slate-800 p-6 rounded-2xl shadow-lg hover:scale-105
-                        transition-transform duration-300 border border-slate-700 "
-          >
-            {/* Icon <CheckCircle className="text-green-400 mb-4" size={28} />*/}
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+        {features.map((feature, index) => {
+          const Icon = feature.icon;
 
-            {/* Title */}
-            <h3 className="text-xl font-semibold "><span className="pr-2">🤨</span>{feature.title}</h3>
-            {/* Description */}
+          return (
+            <div
+              key={index}
+              className="bg-slate-800 p-6 rounded-2xl shadow-lg border border-slate-700 hover:scale-105 transition-transform duration-300"
+            >
+              {/* Icon */}
+              <div className="mb-4 text-blue-400">
+                <Icon size={32} />
+              </div>
 
-          </div>
-        ))}
+              {/* Title */}
+              <h3 className="text-xl font-semibold mb-2">
+                {feature.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-gray-400 text-sm">
+                {feature.description}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

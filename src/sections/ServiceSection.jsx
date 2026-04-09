@@ -1,86 +1,91 @@
 import React from "react";
-import ourGoalsImage from "../images/ct (2).jpg";
+import {
+  Refrigerator,
+  WashingMachine,
+  Flame,
+  Utensils,     // ✅ replace Dishwasher
+  Microwave,    // ⚠️ if error, use Box
+  Snowflake,
+} from "lucide-react";
 
 const features = [
   {
-    title: "Proven Results",
-    icon: "😁",
+    title: "Fridge Repair",
+    icon: Refrigerator,
     description:
-      "We’ve proudly maintained a 100% pass rate for the past 3 years, helping students achieve academic success with confidence.",
+      "Fast and reliable fridge repairs to keep your food fresh and your appliance running efficiently.",
   },
   {
-    title: "Inclusive Learning Environment",
-    icon: "😁",
+    title: "Washing Machine Repair",
+    icon: WashingMachine,
     description:
-      "We support every learner, ensuring lessons are clear, engaging, and suited to different learning styles.",
+      "We fix all washing machine issues quickly so your laundry routine stays uninterrupted.",
   },
   {
-    title: "Experienced & Qualified Tutor",
-    icon: "😁",
+    title: "Stove & Oven Repair",
+    icon: Flame,
     description:
-      "Our tutor is highly trained with extensive experience, focused on delivering results and simplifying complex topics.",
+      "Professional repair services to get your kitchen appliances working safely again.",
   },
   {
-    title: "Exam-Focused Preparation",
-    icon: "😁",
+    title: "Dishwasher Repair",
+    icon: Utensils, // ✅ FIXED
     description:
-      "We prepare students specifically for exams using proven strategies, past papers, and targeted revision techniques.",
+      "Efficient dishwasher repairs to save you time and effort in the kitchen.",
   },
   {
-    title: "CAPS & ATP Aligned Content",
-    icon: "😁",
+    title: "Microwave Repair",
+    icon: Microwave, // ⚠️ if it breaks → replace with Box
     description:
-      "All lessons follow the official CAPS and Annual Teaching Plan (ATP), ensuring students stay aligned with school curriculum.",
+      "Quick microwave fixes to restore convenient cooking in your home.",
   },
   {
-    title: "Dedicated Time & Attention",
-    icon: "😁",
+    title: "Air Conditioner Repair",
+    icon: Snowflake,
     description:
-      "We allocate enough time per lesson to ensure full understanding — no rushing no confusion.",
+      "Stay cool with expert air conditioner repair and maintenance services.",
   },
 ];
+
 function ServiceSection() {
   return (
-    <section className="bg-background-2 text-white py-12 px-6">
+    <section className="bg-slate-900 text-white py-16 px-6">
+      
       <div className="max-w-6xl mx-auto text-center mb-12">
-        {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Our Appliance Repair Service
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-400">
+          Our Appliance Repair Services
         </h2>
-        {/* Subheading 
         <p className="text-gray-300 max-w-2xl mx-auto">
-          Helping students succeed with structured, high-quality tutoring that
-          delivers real results.
+          Professional repair services for all major household appliances.
         </p>
-        */}
       </div>
-      {/* Grid */}
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto ">
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            className="bg-slate-800 p-6 rounded-2xl shadow-lg hover:scale-105
-                        transition-transform duration-300 border border-slate-700 "
-          >
-            {/* Icon <CheckCircle className="text-green-400 mb-4" size={28} />*/}
 
-            {/* Title */}
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+        {features.map((feature, index) => {
+          const Icon = feature.icon;
 
-            <div className="flex flex-row text-center  justify-left gap-1">
-              <div className="text-2xl  ">
-                {feature.icon}
+          return (
+            <div
+              key={index}
+              className="bg-slate-800 p-6 rounded-2xl shadow-lg border border-slate-700 hover:scale-105 transition-transform duration-300"
+            >
+              <div className="flex flex-row items-center">
+              <div className="mb-4 text-blue-400 pr-1  ">
+                <Icon size={32} />
               </div>
-              <div>
-                <h2 className="text-xl font-semibold mb-2">{feature.title}</h2>
+
+              <h3 className="text-xl font-semibold mb-2">
+                {feature.title}
+              </h3>
               </div>
+              
+
+              <p className="text-gray-400 text-sm leading-relaxed">
+                {feature.description}
+              </p>
             </div>
-
-            {/* Description */}
-            <p className="text-gray-400 text-sm leading-relaxed">
-              {feature.description}
-            </p>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
