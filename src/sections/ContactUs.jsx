@@ -1,211 +1,145 @@
 ﻿import React from "react";
-import ourGoalsImage from '../images/hero-img.jpg'
+import {
+  Phone,
+  Mail,
+  MessageCircle,
+} from "lucide-react";
+import ourGoalsImage from "../images/hero-img.jpg";
 
 function ContactUs() {
-    const phoneNumber = "27704419275";
+  const phoneNumber = "27704419275";
+  const message = "Hello, I am interested in your service.";
+  const encodedMessage = encodeURIComponent(message);
 
-    const message = "Hello, I am interested in your service.";
-
-    const encodedMessage = encodeURIComponent(message);
   return (
-<>
-    <section
-      id="contact"
-      className="bg-background-2 text-normal-text-2 py-10  px-4  text-center"
-    >
-      <div className="">
-        <h1 className="text-4xl font-bold text-center pb-3 text-heading-2 leading-tight">
-          Contact Us
-        </h1>
-        <p className="text-xl max-w-2xl mx-auto text-center text-sub-heading-2 ">
-          Ready to grow your business online? Contact us today to discuss your
-          project.
-        </p>
-      </div>
-      <div className="flex flex-col md:flex-row justify-center gap-6 py-10">
-        <div className="block md:hidden justify-left text-left pl-4">
-          <div className="pb-4">
-            <div className="text-xl font-semibold text-sub-heading-2">
-              📞 Call Us
-            </div>
-            <div className="pl-4">
-              <p> 070 441 9275</p>
-            </div>
-          </div>
-          <div className="pb-4">
-            <div className="text-xl font-semibold text-sub-heading-2">
-              📧 Email Us
-            </div>
-            <div className="pl-4">
-              <p>xenobyte012@gmail.com</p>
-            </div>
-          </div>
-          <div>
-            <div className="text-xl font-semibold text-sub-heading-2">
-              Whatsapp Us
-            </div>
-            <div className="pl-4">
-              <p>070 441 9275</p>
-            </div>
-            <div className="pb-4">
-              <div className="pb-4 text-lg italic text-heading-2">
-                Click here to start chatting on Whatsapp
-              </div>
-              <a
-                href={`https://wa.me/${phoneNumber}?text=${encodedMessage}`}
-                target="_blank"
-                rel="nooper noreferrer"
-                className="bg-blue-600 px-5 py-3 w-34 text-center items-center text-h3 text-white rounded-xl shadow-2xl ml-4 mb-6 hover:bg-blue-700 "
-              >
-                Let's chat
-              </a>
-            </div>
-          </div>
+    <>
+      <section className="bg-slate-900 text-white py-16 px-6" id="contact">
+        
+        {/* Header */}
+        <div className="max-w-5xl mx-auto text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-400 mb-4">
+            Contact Us
+          </h2>
+          <p className="text-gray-300">
+            Get in touch with us today for fast and reliable appliance repair services.
+          </p>
+        </div>
 
-          <div className="h-108 mt-4 overflow-hidden hidden md:block">
-            <img loading="lazy"
-              src={ourGoalsImage}
-              alt="contact image"
-              className="object-cover rounded-xl shadow-2xl h-full w-full"
-            />
-          </div>
-        </div>
-        <div className="ms:mx-100">
-          <form className="bg-slate-700 m-4  md:w-100 rounded-xl p-8 flex flex-col text-normal-text-1text text-h3  min-h-4  shadow-2xl ">
-            <span className="text-left text-heading-2 ">Name</span>
-            <input
-              type="text"
-              name="user_name"
-              placeholder="Full name"
-              className="bg-secondary rounded-xl p-2 px-3 mb-4 ml-4 text-heading-2 border-none bg-slate-900 text-base leading-relaxed"
-              required
-            />
-            <span className="text-left">Email</span>
-            <input
-              type="text"
-              name="user_email"
-              placeholder="youremail@gmail.com"
-              className="bg-secondary rounded-xl p-2 px-3 mb-4 ml-4 text-heading-2 border-none bg-slate-900 text-base leading-relaxed"
-              required
-            />
-            <span className="text-left">Phone Number</span>
-            <input
-              type="text"
-              name="user_email"
-              placeholder="e.g. 071 234 5678"
-              className="bg-secondary rounded-xl p-2 px-3 mb-4 ml-4 text-heading-2 border-none bg-slate-900 text-base leading-relaxed"
-              required
-            />
-            <span className="text-left">Message</span>
-            <textarea
-              type="massage"
-              name="message"
-              placeholder="Message:"
-              className="bg-secondary ml-4 rounded-xl p-2 min-h-50 mb-4 text-heading-2 border-none bg-slate-900 text-base leading-relaxed "
-              required
-            ></textarea>
-            <button
-              type="submit"
-              className="text-white  bg-blue-700 p-3 mt-4  rounded-xl hover:bg-blue-800"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
-        <div className="text-left mt-2">
-          <div className="hidden md:block">
-            <div className="pb-4">
-              <div className="text-xl font-semibold text-sub-heading-2">
-                📞 Call Us
-              </div>
-              <div className="pl-4">
-                <p> 070 441 9275</p>
+        {/* Layout */}
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+
+          {/* Contact Info */}
+          <div className="space-y-6">
+            
+            <div className="flex items-center gap-4">
+              <Phone className="text-blue-400" />
+              <div>
+                <p className="font-semibold">Call Us</p>
+                <p className="text-gray-400">070 441 9275</p>
               </div>
             </div>
-            <div className="pb-4">
-              <div className="text-xl font-semibold text-sub-heading-2">
-                📧 Email Us
-              </div>
-              <div className="pl-4">
-                <p>xenobyte012@gmail.com</p>
+
+            <div className="flex items-center gap-4">
+              <Mail className="text-blue-400" />
+              <div>
+                <p className="font-semibold">Email</p>
+                <p className="text-gray-400">xenobyte012@gmail.com</p>
               </div>
             </div>
-            <div>
-              <div className="text-xl font-semibold text-sub-heading-2">
-                Whatsapp Us
-              </div>
-              <div className="pl-4">
-                <p>070 441 9275</p>
-              </div>
-              <div className="pb-4">
-                <div className="pb-4 text-lg italic text-heading-2">
-                  Click here to start chatting on Whatsapp
-                </div>
+
+            <div className="flex items-center gap-4">
+              <MessageCircle className="text-blue-400" />
+              <div>
+                <p className="font-semibold">WhatsApp</p>
                 <a
                   href={`https://wa.me/${phoneNumber}?text=${encodedMessage}`}
                   target="_blank"
-                  rel="nooper noreferrer"
-                  className="bg-blue-600 px-5 py-3 w-34 text-center items-center text-h3 text-white rounded-xl shadow-2xl ml-4 mb-6 hover:bg-blue-700 "
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:underline"
                 >
-                  Let's chat
+                  Start Chat
                 </a>
               </div>
             </div>
 
-            <div className="h-87 w-140 mt-4 overflow-hidden hidden md:block">
-              <img loading="lazy"
+            {/* Image */}
+            <div className="mt-6 rounded-xl overflow-hidden">
+              <img
                 src={ourGoalsImage}
-                alt="contact image"
-                className="object-cover rounded-xl shadow-2xl h-full w-full"
+                alt="contact"
+                className="w-full h-64 object-cover"
               />
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <section className="py-16 px-6 bg-gray-100 text-center">
 
-      
-  <h2 className="text-3xl font-bold">Find Us</h2>
-      
+          {/* Form */}
+          <form className="bg-slate-800 p-8 rounded-2xl shadow-lg space-y-4">
+            
+            <div>
+              <label className="block mb-1 text-sm">Name</label>
+              <input
+                type="text"
+                placeholder="Full name"
+                className="w-full p-3 rounded-lg bg-slate-900 text-white outline-none"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block mb-1 text-sm">Email</label>
+              <input
+                type="email"
+                placeholder="you@example.com"
+                className="w-full p-3 rounded-lg bg-slate-900 text-white outline-none"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block mb-1 text-sm">Phone</label>
+              <input
+                type="text"
+                placeholder="071 234 5678"
+                className="w-full p-3 rounded-lg bg-slate-900 text-white outline-none"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block mb-1 text-sm">Message</label>
+              <textarea
+                placeholder="Your message..."
+                className="w-full p-3 rounded-lg bg-slate-900 text-white min-h-[120px] outline-none"
+                required
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-blue-600 hover:bg-blue-500 transition py-3 rounded-lg font-semibold"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="py-16 px-6 bg-gray-100 text-center">
+        <h2 className="text-3xl font-bold">Find Us</h2>
         <p className="mt-2 text-gray-600">
- 
-           Visit us or find our location on the map
-        
+          Visit us or find our location on the map
         </p>
 
-        
-        <a
- href="https://maps.google.com"
-        
-           target="_blank"
- 
-           rel="noopener noreferrer"
-        
-           className="block mt-8"
->
-
-           <div className="overflow-hidden rounded-xl shadow-lg">
-
-          
-     <iframe
-
-                src="https://www.google.com/maps?q=-25.6544,27.2558&output=embed"
-
-                className="w-full h-[300px] md:h-[400px]"
-
-                loading="lazy"
->
-               </iframe>
-
-      
-           </div>
-      
-        </a>
-
-    
-     </section>
-</>
+        <div className="max-w-5xl mx-auto mt-8 rounded-xl overflow-hidden shadow-lg">
+          <iframe
+            src="https://www.google.com/maps?q=-25.6544,27.2558&output=embed"
+            className="w-full h-[500px] md:h-[400px]"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+    </>
   );
 }
 

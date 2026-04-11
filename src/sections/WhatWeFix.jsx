@@ -1,85 +1,52 @@
 import React from "react";
 import samsung from "../images/samsung-1.jpg";
 import gaggenau from "../images/gaggenau-1.jpg";
-import lieberr from "../images/liebherr-1.jpg";
+import liebherr from "../images/liebherr-1.jpg";
 import miele from "../images/miele-1.jpg";
 import siemens from "../images/siemens-1.jpg";
 import smeg from "../images/smeg-1.jpg";
 import speedqueen from "../images/speed-queen-1.jpg";
 import whirlpool from "../images/whirlpool-1.jpg";
 
+const brands = [
+  samsung,
+  gaggenau,
+  liebherr,
+  miele,
+  siemens,
+  smeg,
+  speedqueen,
+  whirlpool,
+];
+
 function WhatWeFix() {
   return (
-    <section className="bg-background-2 py-12 px-6">
-      <div className="max-w-6xl mx-auto text-center ">
-        <h2 className="text-4xl font-bold mb-4 text-heading-text-2 leading-tight pb-10 ">
+    <section className="bg-slate-900 py-16 px-6 text-center">
+      
+      {/* Heading */}
+      <div className="max-w-6xl mx-auto mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-400 mb-4">
           We Fix All Major Brands
         </h2>
-        <div className=" flex flex-wrap justify-start">
-          <div className="h-14">
+        <p className="text-gray-300 max-w-xl mx-auto">
+          Our technicians are experienced in repairing appliances from all leading brands.
+        </p>
+      </div>
+
+      {/* Logos Grid */}
+      <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center">
+        {brands.map((brand, index) => (
+          <div
+            key={index}
+            className="bg-slate-800 h-20 rounded-xl flex items-center justify-center hover:scale-105 transition"
+          >
             <img
-              src={samsung}
-              alt="samsung image"
-              className="h-full w-30  object-cover  rounded-2xl border-2 border-slate-950"
+              src={brand}
+              alt="brand logo"
+              className="h-full w-full rounded-xl object-contain  hover:grayscale-0 transition object-cover"
             />
           </div>
-          <div className="h-14">
-            <img
-              src={gaggenau}
-              alt="samsung image"
-              className="h-full w-30  object-cover  rounded-2xl border-2 border-slate-950"
-            />
-          </div>
-          <div className="h-14">
-            <img
-              src={lieberr}
-              alt="samsung image"
-              className="h-full w-30  object-cover  rounded-2xl border-2 border-slate-950"
-            />
-          </div>
-          <div className="h-14">
-            <img
-              src={miele}
-              alt="samsung image"
-              className="h-full w-30  object-cover  rounded-2xl border-2 border-slate-950"
-            />
-          </div>
-          <div className="h-14">
-            <img
-              src={smeg}
-              alt="samsung image"
-              className="h-full w-30  object-cover  rounded-2xl border-2 border-slate-950"
-            />
-          </div>
-          <div className="h-14">
-            <img
-              src={speedqueen}
-              alt="samsung image"
-              className="h-full w-30  object-cover  rounded-2xl border-2 border-slate-950"
-            />
-          </div>
-          <div className="h-14">
-            <img
-              src={whirlpool}
-              alt="samsung image"
-              className="h-full w-30  object-cover  rounded-2xl border-2 border-slate-950"
-            />
-          </div>
-          <div className="h-1">
-            <img
-              src={siemens}
-              alt="samsung image"
-              className="h-full w-30   object-cover  rounded-3xl border-2 border-slate-950"
-            />
-          </div>
-        </div>
-        <div className="h-1">
-          <img
-            src={siemens}
-            alt="samsung image"
-            className="h-full w-30   object-cover  rounded-3xl border-2 border-slate-950"
-          />
-        </div>
+        ))}
       </div>
     </section>
   );
