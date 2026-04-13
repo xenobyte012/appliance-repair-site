@@ -8,7 +8,7 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/applience-repair-site">
+    <BrowserRouter basename="/appliance-repair-site">
       <App />
     </BrowserRouter>
   </React.StrictMode>
