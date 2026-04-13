@@ -9,7 +9,7 @@ function Navbar() {
     <>
       <nav className="fixed z-1000 hidden md:flex item-center bg-amber-500 text-gray-100 py-4 px-4 justify-between items-center w-full  ">
         <div className="text-4xl  font-bold tracking-wide ">
-          A plus Appliance Repair
+          Appliance Repair
         </div>
         <div className=" flex gap-4 text-xl ">
           <span className="hover:text-blue-600">
@@ -33,8 +33,8 @@ function Navbar() {
               className="w-10 mr-2 "
               onClick={() => setIsOpen(!isOpen)}
             />
-            <div className="text-2xl  font-bold tracking-wide ">
-              A plus Appliance Repair
+            <div className="text-3xl  font-bold tracking-wide ">
+              Appliance Repair
             </div>
           </div>
         </div>
