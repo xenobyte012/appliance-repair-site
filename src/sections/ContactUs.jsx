@@ -13,14 +13,14 @@ function ContactUs() {
 
   return (
     <>
-      <section className="bg-slate-900 text-white py-16 px-6" id="contact">
+      <section className="bg-background-1 text-normal-text-1 py-16 px-6" id="contact">
         
         {/* Header */}
         <div className="max-w-5xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-400 mb-4">
             Contact Us
           </h2>
-          <p className="text-gray-300">
+          <p className="text-heading-1">
             Get in touch with us today for fast and reliable appliance repair services.
           </p>
         </div>
@@ -29,13 +29,13 @@ function ContactUs() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
 
           {/* Contact Info */}
-          <div className="space-y-6">
+          <div className="space-y-6 ">
             
             <div className="flex items-center gap-4">
               <Phone className="text-blue-400" />
               <div>
                 <p className="font-semibold">Call Us</p>
-                <p className="text-gray-400">070 441 9275</p>
+                <p className="text-sub-heading-1">070 441 9275</p>
               </div>
             </div>
 
@@ -43,7 +43,7 @@ function ContactUs() {
               <Mail className="text-blue-400" />
               <div>
                 <p className="font-semibold">Email</p>
-                <p className="text-gray-400">xenobyte012@gmail.com</p>
+                <p className="text-sub-heading-1">xenobyte012@gmail.com</p>
               </div>
             </div>
 
@@ -62,7 +62,7 @@ function ContactUs() {
               </div>
             </div>
 
-            {/* Image */}
+            {/* Image 
             <div className="mt-6 rounded-xl overflow-hidden">
               <img
                 src={ourGoalsImage}
@@ -70,13 +70,14 @@ function ContactUs() {
                 className="w-full h-64 object-cover"
               />
             </div>
+            */}
           </div>
 
           {/* Form */}
           <form className="bg-slate-800 p-8 rounded-2xl shadow-lg space-y-4">
             
             <div>
-              <label className="block mb-1 text-sm">Name</label>
+              <label className="block text-sub-heading-2 mb-1 text-sm">Name</label>
               <input
                 type="text"
                 placeholder="Full name"
@@ -86,7 +87,7 @@ function ContactUs() {
             </div>
 
             <div>
-              <label className="block mb-1 text-sm">Email</label>
+              <label className="block text-sub-heading-2 mb-1 text-sm">Email</label>
               <input
                 type="email"
                 placeholder="you@example.com"
@@ -96,7 +97,7 @@ function ContactUs() {
             </div>
 
             <div>
-              <label className="block mb-1 text-sm">Phone</label>
+              <label className="block text-sub-heading-2 mb-1 text-sm">Phone</label>
               <input
                 type="text"
                 placeholder="071 234 5678"
@@ -106,7 +107,7 @@ function ContactUs() {
             </div>
 
             <div>
-              <label className="block mb-1 text-sm">Message</label>
+              <label className="block text-sub-heading-2 mb-1 text-sm">Message</label>
               <textarea
                 placeholder="Your message..."
                 className="w-full p-3 rounded-lg bg-slate-900 text-white min-h-[120px] outline-none"
@@ -116,7 +117,7 @@ function ContactUs() {
 
             <button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-500 transition py-3 rounded-lg font-semibold"
+              className="w-full text-white bg-blue-600 hover:bg-blue-500 transition py-3 rounded-lg font-semibold"
             >
               Send Message
             </button>
@@ -124,8 +125,8 @@ function ContactUs() {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="py-16 px-6 bg-gray-100 text-center">
+      {/* Map Section 
+      <section className="py-16 px-6 bg-slate-100 text-center">
         <h2 className="text-3xl font-bold">Find Us</h2>
         <p className="mt-2 text-gray-600">
           Visit us or find our location on the map
@@ -139,6 +140,7 @@ function ContactUs() {
           ></iframe>
         </div>
       </section>
+      */}
     </>
   );
 }

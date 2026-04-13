@@ -6,29 +6,29 @@ import star from '../images/star.webp'
 import googleImage from '../images/google-image.webp'
 
 function Testimonials() {
-  const data = [
-    {
-      name: "Temoso M. Parent",
-      review:
-        "“My daughter went from dreading math to actually asking for extra problems. The tutors are patient and make learning fun.”",
-      profilePicture: profileImage_1,
-      date: "2 week ago ",
-    },
-    {
-      name: "Temoso L. Grade 12 Student",
-      review:
-        "“I finally understand physics thanks to this academy. My grades went from a 4 to an 7 in one Term!”",
-      profilePicture: profileImage_1,
-      date: "1 month ago",
-    },
-    {
-      name: " Boitumelo R.  Grade 11 Student",
-      review:
-        "“The one‑on‑one attention made all the difference. I feel confident going into exams now.”",
-      profilePicture: profileImage_1,
-      date: "4 months ago",
-    },
-  ];
+const data = [
+  {
+    name: "Thabo Mokoena",
+    review:
+      "“My fridge stopped working overnight and they fixed it the same day. Fast, professional, and very affordable service.”",
+    profilePicture: profileImage_1,
+    date: "2 weeks ago",
+  },
+  {
+    name: "Lerato Nkosi",
+    review:
+      "“Excellent service! My washing machine was leaking badly, but they repaired it quickly. Highly recommend them.”",
+    profilePicture: image_1,
+    date: "1 month ago",
+  },
+  {
+    name: "Kabelo Dlamini",
+    review:
+      "“Very reliable technicians. They fixed my oven and explained everything clearly. Great experience overall.”",
+    profilePicture: image_2,
+    date: "3 months ago",
+  },
+];
 
 
 

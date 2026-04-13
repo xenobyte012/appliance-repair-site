@@ -50,14 +50,14 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-slate-900 text-white py-16 px-6">
+    <section className="bg-background-1 text-sub-heading-2 py-16 px-6">
       
       {/* Header */}
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-400">
           Why Choose Us
         </h2>
-        <p className="text-gray-300 max-w-2xl mx-auto">
+        <p className="text-heading-1 max-w-2xl mx-auto">
           Reliable, fast, and professional appliance repair services you can trust.
         </p>
       </div>

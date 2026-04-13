@@ -9,12 +9,12 @@ import gallary_5 from "../images/test-1 (2).jpg";
 import gallary_6 from "../images/test-1 (2).jpg";
 
 const images = [
-  gallary_1,
-  gallary_2,
-  gallary_3,
-  gallary_4,
-  gallary_5,
-  gallary_6,
+  "https://joburgappliancerepair.co.za/wp-content/uploads/2025/05/appliance-repair-1024x683.jpg",
+  "https://appliancerepairtechnologies.co.za/wp-content/uploads/2021/03/What-to-expect-for-your-appliance-repair-appointment.jpg",
+  "https://appliancepros.co.za/wp-content/uploads/2022/12/washing-machine-repair.jpg",
+  "https://www.smartappliance.co.za/wp-content/uploads/elementor/thumbs/appliance-repair-la-lucia-fridge-and-more--jpg-qlhok7b8v16m099pp79xqq1s9ydytqybhjuwihy3nk.webp",
+  "https://bertelsmidrand.co.za/wp-content/uploads/2024/01/20240123_153828-1024x768.jpg",
+  "https://i0.wp.com/applianceman.co.za/wp-content/uploads/2025/12/Appliance-Man-12.jpg?resize=1024%2C683&ssl=1",
 ];
 
 export default function Gallery() {
@@ -63,7 +63,7 @@ export default function Gallery() {
             >
               <img
                 src={img}
-                alt="work"
+                alt="images"
                 className="w-full h-full object-cover"
               />
 

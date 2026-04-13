@@ -21,14 +21,14 @@ const brands = [
 
 function WhatWeFix() {
   return (
-    <section className="bg-slate-900 py-16 px-6 text-center">
+    <section className="bg-background-2 py-16 px-6 text-center">
       
       {/* Heading */}
       <div className="max-w-6xl mx-auto mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-400 mb-4">
           We Fix All Major Brands
         </h2>
-        <p className="text-gray-300 max-w-xl mx-auto">
+        <p className="text-slate-900 max-w-xl mx-auto">
           Our technicians are experienced in repairing appliances from all leading brands.
         </p>
       </div>

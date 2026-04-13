@@ -49,10 +49,10 @@ function Footer() {
           {/* Brand */}
           <div>
             <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent mb-3">
-              St Dave Academy
+              A plus Appliance Repair
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Unlocking your full academic potential through structured and results-driven tutoring.
+              Same-day service for all major brands. Affordable, professional, and trusted by homeowners.
             </p>
           </div>
 
@@ -78,7 +78,7 @@ function Footer() {
             <div className="text-gray-400 text-sm space-y-2">
               <p>📍 Pretoria, South Africa</p>
               <p>📞 +27 64 182 2578</p>
-              <p>📧 stdaveacademy@gmail.com</p>
+              <p>📧 A plus Appliance Repair@gmail.com</p>
             </div>
 
             {/* Socials */}
@@ -101,7 +101,7 @@ function Footer() {
         {/* Divider */}
         <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
           
-          <p>© {currentYear} St Dave Academy. All rights reserved.</p>
+          <p>© {currentYear} A plus Appliance Repair. All rights reserved.</p>
 
           <p>
             Designed by{" "}

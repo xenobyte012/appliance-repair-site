@@ -13,7 +13,7 @@ function HeroSection() {
 
       {/* Background Image */}
       <img
-        src={heroImage}
+        src="https://saafikcool.co.za/wp-content/uploads/2025/06/Appliance-repair-Johannesburg-and-surrounding-area.jpg.webp"
         alt="Appliance repair service"
         className="absolute inset-0 w-full h-full object-cover"
       />
@@ -22,6 +22,7 @@ function HeroSection() {
       <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Content */}
+      
       <div className="relative z-10 flex flex-col justify-center h-screen px-6 md:px-12 max-w-5xl">
         
         {/* Heading */}
@@ -40,7 +41,7 @@ function HeroSection() {
         </p>
 
         {/* Buttons */}
-        <div className="mt-8 flex flex-col sm:flex-row gap-4">
+        <div className="mt-8 flex flex-col sm:flex-row gap-8">
           
           <button
             onClick={scrollToContact}

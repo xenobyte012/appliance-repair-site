@@ -9,15 +9,13 @@ function Navbar() {
     <>
       <nav className="fixed z-1000 hidden md:flex item-center bg-amber-500 text-gray-100 py-4 px-4 justify-between items-center w-full  ">
         <div className="text-4xl  font-bold tracking-wide ">
-          St Dave Academy
+          A plus Appliance Repair
         </div>
         <div className=" flex gap-4 text-xl ">
           <span className="hover:text-blue-600">
             <a href="#home">Home</a>
           </span>
-          <span className="hover:text-blue-600">
-            <a href="#packages">Packages</a>
-          </span>
+          
           <span className="hover:text-blue-600">
             <a href="#about">About</a>
           </span>
@@ -35,8 +33,8 @@ function Navbar() {
               className="w-10 mr-2 "
               onClick={() => setIsOpen(!isOpen)}
             />
-            <div className="text-3xl  font-bold tracking-wide ">
-              St Dave Academy
+            <div className="text-2xl  font-bold tracking-wide ">
+              A plus Appliance Repair
             </div>
           </div>
         </div>
@@ -44,7 +42,7 @@ function Navbar() {
       <div
         className={`z-200 p-4 fixed top-0 left-0 h-full w-64 bg-amber-500 text-white transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"} md:hidden`}
       >
-        <div className="flex flex-row mb-4 items-center z-290">
+        <div className="flex flex-row mb-6 items-center z-290">
           <img
             onClick={() => setIsOpen(false)}
             src={closeButton}
@@ -62,12 +60,6 @@ function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               <a href="#home">Home</a>
-            </span>
-            <span
-              className="hover:text-blue-600"
-              onClick={() => setIsOpen(false)}
-            >
-              <a href="#packages">Packages</a>
             </span>
             <span
               className="hover:text-blue-600"
